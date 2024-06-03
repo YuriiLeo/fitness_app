@@ -96,6 +96,7 @@ export const socials = [
   {
     name: 'instagram',
     url: '/instagram.svg',
+    pass: 'https://www.instagram.com/move_mastery_/',
   },
   // {
   //   name: 'facebook',

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 
+import Link from 'next/link';
 import styles from '../styles';
 import { footerVariants } from '../utils/motion';
 import { socials } from '../constants';
@@ -35,12 +36,14 @@ const Footer = () => (
           <p className="font-normal text-[14px] text-white opacity-50">© 2024  Усі права захищені</p>
           <div className="flex gap-4">
             {socials.map((social) => (
-              <img
-                key={social.name}
-                src={social.url}
-                alt={social.name}
-                className="w-[24px] h-[24px] object-contain cursor-pointer"
-              />
+              <Link href={social.pass} target="_blank" passHref>
+                <img
+                  key={social.name}
+                  src={social.url}
+                  alt={social.name}
+                  className="w-[24px] h-[24px] object-contain cursor-pointer"
+                />
+              </Link>
             ))}
           </div>
         </div>
